@@ -28,6 +28,9 @@ public class AndroidChineseStringExtension {
   private String url = "http://opencc.byvoid.com/convert";
   private String textName = "text";
   private String configName = "config";
+  private String cnStringsXmlPath = "src/main/res/values-zh-rCN/strings.xml";
+  private String hkStringsXmlPath = "src/main/res/values-zh-rHK/strings.xml";
+  private String twStringsXmlPath = "src/main/res/values-zh-rTW/strings.xml";
 
   public String getUrl() {
     return url;
@@ -51,5 +54,29 @@ public class AndroidChineseStringExtension {
 
   public void setConfigName(String configName) {
     this.configName = configName;
+  }
+
+  public String getCnStringsXmlPath() {
+    return cnStringsXmlPath;
+  }
+
+  public void setCnStringsXmlPath(String cnStringsXmlPath) {
+    this.cnStringsXmlPath = cnStringsXmlPath;
+  }
+
+  public String getHkStringsXmlPath() {
+    return hkStringsXmlPath;
+  }
+
+  public void setHkStringsXmlPath(String hkStringsXmlPath) {
+    this.hkStringsXmlPath = hkStringsXmlPath;
+  }
+
+  public String getTwStringsXmlPath() {
+    return twStringsXmlPath;
+  }
+
+  public void setTwStringsXmlPath(String twStringsXmlPath) {
+    this.twStringsXmlPath = twStringsXmlPath;
   }
 }

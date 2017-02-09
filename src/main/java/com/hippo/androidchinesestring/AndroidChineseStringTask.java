@@ -20,21 +20,20 @@ package com.hippo.androidchinesestring;
  * Created by Hippo on 2/9/2017.
  */
 
+import java.io.IOException;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 
 public class AndroidChineseStringTask extends DefaultTask {
 
   @TaskAction
-  public void convert() {
+  public void convert() throws IOException {
     AndroidChineseStringExtension extension =
         getProject().getExtensions().findByType(AndroidChineseStringExtension.class);
     if (extension == null) {
       extension = new AndroidChineseStringExtension();
     }
 
-    // TODO
-    System.out.println(getProject().getProjectDir());
-    System.out.println(extension.getUrl());
+    new AndroidChineseStringConverter(getProject(), extension).convert();
   }
 }
